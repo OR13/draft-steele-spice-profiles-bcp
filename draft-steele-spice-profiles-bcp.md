@@ -19,11 +19,11 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: "Digital Credential Profiles Best Current Practices"
+abbrev: "DCP-BCP"
 category: info
 
-docname: draft-todo-yourname-protocol-latest
+docname: draft-steele-spice-profiles-bcp-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
