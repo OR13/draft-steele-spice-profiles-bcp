@@ -12,9 +12,9 @@ v: 3
 area: "Security"
 workgroup: "Secure Patterns for Internet CrEdentials"
 keyword:
- - next generation
- - unicorn
- - sparkling distributed ledger
+ - digitial credentials
+ - data model profiles
+ - policy guidance
 venue:
   group: "Secure Patterns for Internet CrEdentials"
   type: "Working Group"
@@ -26,7 +26,7 @@ venue:
 author:
  -
     fullname: "Orie Steele"
-    organization: Your Organization Here
+    organization: Transmute
     email: "orie@transmute.industries"
 
 normative:
