@@ -1036,7 +1036,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Steele, et al.</td>
-<td class="center">Expires 22 June 2024</td>
+<td class="center">Expires 23 June 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1049,12 +1049,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-steele-spice-profiles-bcp-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-12-20" class="published">20 December 2023</time>
+<time datetime="2023-12-21" class="published">21 December 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-06-22">22 June 2024</time></dd>
+<dd class="expires"><time datetime="2024-06-23">23 June 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1115,7 +1115,7 @@ such that they can be translated into digital credential profiles.<a href="#sect
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 22 June 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 23 June 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1205,22 +1205,22 @@ such that they can be translated into digital credential profiles.<a href="#sect
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">Verifier's have digital credential requirements that reduce their liability,
-improve their transaction throughput, comply with local, regional or international
+<p id="section-1-1">Verifiers have digital credential requirements that reduce their liability,
+improve their transaction throughput, comply with local, regional, or international
 laws, and support their environmental, social and governance objectives and values.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">Requirements are often expressed as "Policy Documents", and furnished to holders,
-in order to enable them to easily comply. For example, sometimes to receive a new
+to enable them to easily comply. For example, sometimes to receive a new
 credential, a holder may need to present one or more existing credentials, and
-different regional agencies might have unique requirements regarding the quality
+different regional agencies might have unique requirements regarding the quality,
 age, and issuing authority of these credentials.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">Not all the attributes of a credential may be necessary to disclose, and the details
 of the serialization are often less relevant to the verifier than
-the authenticity and integrity of the credential attributes attributes.<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">Verifier's need to update their policies as new credential formats become
+the authenticity and integrity of the credential attributes.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">Verifiers need to update their policies as new credential formats become
 available, but still need to ensure that mandatory attributes are disclosed,
 even while changing the securing mechanisms and serialization details.<a href="#section-1-4" class="pilcrow">¶</a></p>
 <p id="section-1-5">Depending on how a verifier wrote their policy, the process of updating it
-in order to take advantage of new capabilities, safer cryptography,
+to take advantage of new capabilities, safer cryptography,
 smaller message sizes, or advances in data minimization, can be difficult.<a href="#section-1-5" class="pilcrow">¶</a></p>
 <p id="section-1-6">This document provides guidance to policy writers, enabling them to construct
 policies that can be translated into human and machine verifiable profiles,
@@ -1251,9 +1251,9 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-ontologies">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-ontologies" class="section-name selfRef">Ontologies</a>
       </h2>
-<p id="section-3-1">Verifier's can share their view of a subject area or domain by acknowledging or leveraging ontologies.
-Ontologies can be leveraged to model information requirements, with or without requiring the data'
-format to explicitly encode the ontology, or leverage the ontology directly in the construction of
+<p id="section-3-1">Verifiers can share their view of a subject area or domain by acknowledging or leveraging ontologies.
+Ontologies can be leveraged to model information requirements, with or without requiring the data
+format to explicitly encode the ontology or leverage the ontology directly in the construction of
 digital credentials.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">For example, the ontology defined in <span>[<a href="#I-D.draft-petithuguenin-rfc-ontology" class="cite xref">I-D.draft-petithuguenin-rfc-ontology</a>]</span> can be used to describe the information
 required in a digital credential for RFCs, without requiring the digital credential to contain
@@ -1269,17 +1269,16 @@ and the ontologies that can express the concepts needed to understand the inform
       <h2 id="name-information-vs-data">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-information-vs-data" class="section-name selfRef">Information vs Data</a>
       </h2>
-<p id="section-4-1">Information is abstract, it can be expressed many ways,
-take for example the statement:<a href="#section-4-1" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-4-2">
+<p id="section-4-1">Information is abstract, we can express the same information in many different ways, including in many different serializations.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">The following statement for example, expresses information:<a href="#section-4-2" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-4-3">
 <pre>
-Alice believes Bob is 42 years old
-</pre><a href="#section-4-2" class="pilcrow">¶</a>
+Alice believes Bob is 42 years old.
+</pre><a href="#section-4-3" class="pilcrow">¶</a>
 </div>
-<p id="section-4-3">This can be expressed in many different data structures,
-and the type of data structure can vary while preserving the information.<a href="#section-4-3" class="pilcrow">¶</a></p>
-<p id="section-4-4">In JSON we might write:<a href="#section-4-4" class="pilcrow">¶</a></p>
-<div class="lang-json sourcecode" id="section-4-5">
+<p id="section-4-4">That can also be expressed in different data structures, while preserving the information:<a href="#section-4-4" class="pilcrow">¶</a></p>
+<p id="section-4-5">in JSON:<a href="#section-4-5" class="pilcrow">¶</a></p>
+<div class="lang-json sourcecode" id="section-4-6">
 <pre>
 {
   "alice": {
@@ -1292,13 +1291,11 @@ and the type of data structure can vary while preserving the information.<a href
     }
   }
 }
-</pre><a href="#section-4-5" class="pilcrow">¶</a>
+</pre><a href="#section-4-6" class="pilcrow">¶</a>
 </div>
-<p id="section-4-6">There are many different ways we can express the same information in a single serialization
-and many different serializations.<a href="#section-4-6" class="pilcrow">¶</a></p>
-<p id="section-4-7">Verifiers can write policies that mandate only one way to encode information in a serialization,
-and only allow one serialization, and this can reduce the cost to implement, and attack surface associated with
-support the digital credentials that are acceptable to a verifier.<a href="#section-4-7" class="pilcrow">¶</a></p>
+<p id="section-4-7">Verifiers can write policies that mandate a single method to encode information in a serialization
+and allow only one serialization. This can reduce both the cost to implement and the attack surface
+associated with the digital credentials that are acceptable to the verifier.<a href="#section-4-7" class="pilcrow">¶</a></p>
 <p id="section-4-8">However, if a new serialization is invented, that is simpler to support, and more directly aligns
 with the values of the verifier and their mission objectives, having such a policy could prevent the
 verifier from adopting the new and improved serialization, even if it secures the same information
@@ -1314,17 +1311,17 @@ and the acceptable serializations that can express this information required.<a 
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-schema-vs-definition" class="section-name selfRef">Schema vs Definition</a>
       </h2>
 <p id="section-5-1">Once a verifier has documented their information requirements, and selected data formats
-capable of expressing the required information while satisfying their policies and values.<a href="#section-5-1" class="pilcrow">¶</a></p>
-<p id="section-5-2">The details of the acceptable data format <span class="bcp14">SHOULD</span> be considered.<a href="#section-5-2" class="pilcrow">¶</a></p>
-<p id="section-5-3">There are a number of subtle details regarding octet encodings that can lead to security
-or performance issues in digital credential formats.<a href="#section-5-3" class="pilcrow">¶</a></p>
-<p id="section-5-4">The first is understanding the allowed data types for expressing information, for example
-integers, floating point numbers, strings and boolean values.<a href="#section-5-4" class="pilcrow">¶</a></p>
-<p id="section-5-5">Policy writers <span class="bcp14">SHOULD</span> describe the allowed data types for the expression of information,
-and <span class="bcp14">SHOULD NOT</span> support polymorphic types.<a href="#section-5-5" class="pilcrow">¶</a></p>
-<p id="section-5-6">Schema or data definition languages such as <span>[<a href="#RFC8610" class="cite xref">RFC8610</a>]</span> <span class="bcp14">SHOULD</span> be used when describing
+capable of expressing the required information while satisfying their policies and values,
+the details of the acceptable data format <span class="bcp14">SHOULD</span> be considered.<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-2">There are a number of subtle details regarding octet encodings that can lead to security
+or performance issues in digital credential formats.<a href="#section-5-2" class="pilcrow">¶</a></p>
+<p id="section-5-3">For example, understanding the allowed data types for expressing information, be it an integer,
+a floating point number, a string, or a boolean value.<a href="#section-5-3" class="pilcrow">¶</a></p>
+<p id="section-5-4">Policy writers <span class="bcp14">SHOULD</span> describe the allowed data types for the expression of information,
+and <span class="bcp14">SHOULD NOT</span> support polymorphic types.<a href="#section-5-4" class="pilcrow">¶</a></p>
+<p id="section-5-5">Schema or data definition languages such as <span>[<a href="#RFC8610" class="cite xref">RFC8610</a>]</span> <span class="bcp14">SHOULD</span> be used when describing
 acceptable expressions of information models, so that validation of data instances
-can be automated.<a href="#section-5-6" class="pilcrow">¶</a></p>
+can be automated.<a href="#section-5-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="designing-data-structures">
@@ -1335,7 +1332,7 @@ can be automated.<a href="#section-5-6" class="pilcrow">¶</a></p>
 <p id="section-6-1">Although schema or data definition languages can help address some common security issues
 such as validation as described in <span>[<a href="#RFC4949" class="cite xref">RFC4949</a>]</span>, there are still problematic
 expressions of information which should generally be avoided even when fully specifying data.<a href="#section-6-1" class="pilcrow">¶</a></p>
-<p id="section-6-2">Most commonly deeply nested data structures, or lists of deeply nested data strucutures containing lists.<a href="#section-6-2" class="pilcrow">¶</a></p>
+<p id="section-6-2">Most commonly deeply nested data structures, or lists of deeply nested data structures containing lists.<a href="#section-6-2" class="pilcrow">¶</a></p>
 <p id="section-6-3">Most digital credentials are about asserting attributes of a subject, in a way that is secured by the issuer,
 and provable by the holder.<a href="#section-6-3" class="pilcrow">¶</a></p>
 <p id="section-6-4">This can naturally be expressed using a simple map data type.<a href="#section-6-4" class="pilcrow">¶</a></p>
@@ -1360,11 +1357,11 @@ subject-attributes = {
 </li>
       </ol>
 <p id="section-6-9">Policy writers <span class="bcp14">SHOULD</span> leverage tabular data structures (tables, csv) whenever possible.<a href="#section-6-9" class="pilcrow">¶</a></p>
-<p id="section-6-10">Policy writers <span class="bcp14">SHOULD</span> restrict the data that is expressed in digital credentials and how the data is expressed
+<p id="section-6-10">Policy writers <span class="bcp14">SHOULD</span> restrict what data is expressed in a digital credential and how the data is expressed
 not just the information that is required to be present.<a href="#section-6-10" class="pilcrow">¶</a></p>
-<p id="section-6-11">Policy writers <span class="bcp14">SHOULD</span> avoid making recomentations where the same information may be conveyed in many different,
+<p id="section-6-11">Policy writers <span class="bcp14">SHOULD</span> avoid making recommendations where the same information may be conveyed in many different,
 but equivalent data structures. When leveraging CBOR, <span>[<a href="#I-D.draft-ietf-cbor-cde" class="cite xref">I-D.draft-ietf-cbor-cde</a>]</span> <span class="bcp14">SHOULD</span> be used.<a href="#section-6-11" class="pilcrow">¶</a></p>
-<p id="section-6-12">Policy writers should avoid creating "frameworks" where interoperability is not immediatly available <span>[<a href="#RFC9518" class="cite xref">RFC9518</a>]</span>.<a href="#section-6-12" class="pilcrow">¶</a></p>
+<p id="section-6-12">Policy writers should avoid creating "frameworks" where interoperability is not immediately available <span>[<a href="#RFC9518" class="cite xref">RFC9518</a>]</span>.<a href="#section-6-12" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
@@ -1378,7 +1375,8 @@ but equivalent data structures. When leveraging CBOR, <span>[<a href="#I-D.draft
         <h3 id="name-cryptographic-agility">
 <a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-cryptographic-agility" class="section-name selfRef">Cryptographic Agility</a>
         </h3>
-<p id="section-7.1-1">Registries /  Pick at least 2, use at least N bit security... avoid <span class="bcp14">MUST</span> support.... recommend AT LEAST support.<a href="#section-7.1-1" class="pilcrow">¶</a></p>
+<p id="section-7.1-1">TODO Cryptographic Agility<a href="#section-7.1-1" class="pilcrow">¶</a></p>
+<p id="section-7.1-2">Registries /  Pick at least 2, use at least N bit security... avoid <span class="bcp14">MUST</span> support.... recommend AT LEAST support.<a href="#section-7.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="internationalized-names">
@@ -1386,7 +1384,8 @@ but equivalent data structures. When leveraging CBOR, <span>[<a href="#I-D.draft
         <h3 id="name-internationalized-names">
 <a href="#section-7.2" class="section-number selfRef">7.2. </a><a href="#name-internationalized-names" class="section-name selfRef">Internationalized Names</a>
         </h3>
-<p id="section-7.2-1">Strings / domain names... Unicode.<a href="#section-7.2-1" class="pilcrow">¶</a></p>
+<p id="section-7.2-1">TODO Internationalized Names
+Strings / domain names... Unicode.<a href="#section-7.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="exploiting-data-validation">
