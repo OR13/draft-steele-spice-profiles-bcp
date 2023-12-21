@@ -1,0 +1,361 @@
+
+
+
+
+Secure Patterns for Internet CrEdentials                       O. Steele
+Internet-Draft                                                 Transmute
+Intended status: Informational                                M. Prorock
+Expires: 23 June 2024                                           mesur.io
+                                                           M. Alkhraishi
+                                                                mavennet
+                                                        21 December 2023
+
+
+           Digital Credential Profiles Best Current Practices
+                 draft-steele-spice-profiles-bcp-latest
+
+Abstract
+
+   Digital Credentials are frequently modeled on documents, forms, and
+   messages that enable a holder to prove they have attributes that are
+   acceptable to a verifier.
+
+   This document provides guidance to verifiers enabling them to
+   describe their requirements such that they can be translated into
+   digital credential profiles.
+
+About This Document
+
+   This note is to be removed before publishing as an RFC.
+
+   The latest revision of this draft can be found at
+   https://OR13.github.io/draft-steele-spice-profiles-bcp/draft-steele-
+   spice-profiles-bcp.html.  Status information for this document may be
+   found at https://datatracker.ietf.org/doc/draft-steele-spice-
+   profiles-bcp/.
+
+   Discussion of this document takes place on the Secure Patterns for
+   Internet CrEdentials Working Group mailing list
+   (mailto:spice@ietf.org), which is archived at
+   https://mailarchive.ietf.org/arch/browse/spice/.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/spice/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/OR13/draft-steele-spice-profiles-bcp.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 23 June 2024.
+
+Copyright Notice
+
+   Copyright (c) 2023 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+   2.  Terminology
+   3.  Ontologies
+   4.  Information vs Data
+   5.  Schema vs Definition
+   6.  Designing Data Structures
+   7.  Security Considerations
+     7.1.  Cryptographic Agility
+     7.2.  Internationalized Names
+     7.3.  Exploiting Data Validation
+   8.  IANA Considerations
+   9.  References
+     9.1.  Normative References
+     9.2.  Informative References
+   Acknowledgments
+   Authors' Addresses
+
+1.  Introduction
+
+   Verifiers have digital credential requirements that reduce their
+   liability, improve their transaction throughput, comply with local,
+   regional, or international laws, and support their environmental,
+   social and governance objectives and values.
+
+   Requirements are often expressed as "Policy Documents", and furnished
+   to holders, to enable them to easily comply.  For example, sometimes
+   to receive a new credential, a holder may need to present one or more
+   existing credentials, and different regional agencies might have
+   unique requirements regarding the quality, age, and issuing authority
+   of these credentials.
+
+   Not all the attributes of a credential may be necessary to disclose,
+   and the details of the serialization are often less relevant to the
+   verifier than the authenticity and integrity of the credential
+   attributes.
+
+   Verifiers need to update their policies as new credential formats
+   become available, but still need to ensure that mandatory attributes
+   are disclosed, even while changing the securing mechanisms and
+   serialization details.
+
+   Depending on how a verifier wrote their policy, the process of
+   updating it to take advantage of new capabilities, safer
+   cryptography, smaller message sizes, or advances in data
+   minimization, can be difficult.
+
+   This document provides guidance to policy writers, enabling them to
+   construct policies that can be translated into human and machine
+   verifiable profiles, enabling digital credential formats to evolve
+   with the speed and precision at which policies can be written.
+
+2.  Terminology
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+   Ontology:  a set of concepts and categories in a subject area or
+      domain that shows their properties and the relations between them.
+      (oxford dictionary citation fixme)
+
+3.  Ontologies
+
+   Verifiers can share their view of a subject area or domain by
+   acknowledging or leveraging ontologies.  Ontologies can be leveraged
+   to model information requirements, with or without requiring the data
+   format to explicitly encode the ontology or leverage the ontology
+   directly in the construction of digital credentials.
+
+   For example, the ontology defined in
+   [I-D.draft-petithuguenin-rfc-ontology] can be used to describe the
+   information required in a digital credential for RFCs, without
+   requiring the digital credential to contain the literal strings used
+   to serialize the ontology, for example the string:
+   "ftp://shalmaneser.org/rfc#area", need not be present, so long as the
+   verifier describes that the string "area" is equivalent in their
+   profile text.
+
+   Policy writers SHOULD distinguish between the information they
+   require, and the ontologies that can express the concepts needed to
+   understand the information.
+
+4.  Information vs Data
+
+   Information is abstract, we can express the same information in many
+   different ways, including in many different serializations.
+
+   The following statement for example, expresses information:
+
+   Alice believes Bob is 42 years old.
+
+   That can also be expressed in different data structures, while
+   preserving the information:
+
+   in JSON:
+
+   {
+     "alice": {
+       "knows": {
+         "bob": {
+           "age": {
+             "42": "years"
+           }
+         }
+       }
+     }
+   }
+
+   Verifiers can write policies that mandate a single method to encode
+   information in a serialization and allow only one serialization.
+   This can reduce both the cost to implement and the attack surface
+   associated with the digital credentials that are acceptable to the
+   verifier.
+
+   However, if a new serialization is invented, that is simpler to
+   support, and more directly aligns with the values of the verifier and
+   their mission objectives, having such a policy could prevent the
+   verifier from adopting the new and improved serialization, even if it
+   secures the same information and provides additional benefits, beyond
+   integrity and authenticity, such as compactness, reduced computation
+   and storage costs, or safer formal modeling capabilities.
+
+   Policy writers SHOULD distinguish between the information they
+   require, and the acceptable serializations that can express this
+   information required.
+
+5.  Schema vs Definition
+
+   Once a verifier has documented their information requirements, and
+   selected data formats capable of expressing the required information
+   while satisfying their policies and values, the details of the
+   acceptable data format SHOULD be considered.
+
+   There are a number of subtle details regarding octet encodings that
+   can lead to security or performance issues in digital credential
+   formats.
+
+   For example, understanding the allowed data types for expressing
+   information, be it an integer, a floating point number, a string, or
+   a boolean value.
+
+   Policy writers SHOULD describe the allowed data types for the
+   expression of information, and SHOULD NOT support polymorphic types.
+
+   Schema or data definition languages such as [RFC8610] SHOULD be used
+   when describing acceptable expressions of information models, so that
+   validation of data instances can be automated.
+
+6.  Designing Data Structures
+
+   Although schema or data definition languages can help address some
+   common security issues such as validation as described in [RFC4949],
+   there are still problematic expressions of information which should
+   generally be avoided even when fully specifying data.
+
+   Most commonly deeply nested data structures, or lists of deeply
+   nested data structures containing lists.
+
+   Most digital credentials are about asserting attributes of a subject,
+   in a way that is secured by the issuer, and provable by the holder.
+
+   This can naturally be expressed using a simple map data type.
+
+   subject-attributes = {
+     ; identifier
+     ? &(id: 1) => int,
+     ; age
+     ? &(age: 2) => int,
+   }
+
+   Strings and arbitrary length data structures SHOULD be avoided,
+   whenever possible.
+
+   As the issuer secures the data, the interpretation of the data is
+   always in the context of:
+
+   1.  the definitions published by the issuer.
+
+   2.  the data the issuer chose to secure that expresses the
+       information.
+
+   Policy writers SHOULD leverage tabular data structures (tables, csv)
+   whenever possible.
+
+   Policy writers SHOULD restrict what data is expressed in a digital
+   credential and how the data is expressed not just the information
+   that is required to be present.
+
+   Policy writers SHOULD avoid making recommendations where the same
+   information may be conveyed in many different, but equivalent data
+   structures.  When leveraging CBOR, [I-D.draft-ietf-cbor-cde] SHOULD
+   be used.
+
+   Policy writers should avoid creating "frameworks" where
+   interoperability is not immediately available [RFC9518].
+
+7.  Security Considerations
+
+   TODO Security
+
+7.1.  Cryptographic Agility
+
+   TODO Cryptographic Agility
+
+   Registries / Pick at least 2, use at least N bit security... avoid
+   MUST support.... recommend AT LEAST support.
+
+7.2.  Internationalized Names
+
+   TODO Internationalized Names Strings / domain names... Unicode.
+
+7.3.  Exploiting Data Validation
+
+   Max depth exceeded in JSON, cannonicalization timeout in XML / JSON-
+   LD, similar issues with large CBOR structures.
+
+8.  IANA Considerations
+
+   This document has no IANA actions.
+
+9.  References
+
+9.1.  Normative References
+
+   [I-D.draft-ietf-cbor-cde]
+              Bormann, C., "CBOR Common Deterministic Encoding (CDE)",
+              Work in Progress, Internet-Draft, draft-ietf-cbor-cde-00,
+              27 November 2023, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-cbor-cde-00>.
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
+   [RFC4949]  Shirey, R., "Internet Security Glossary, Version 2",
+              FYI 36, RFC 4949, DOI 10.17487/RFC4949, August 2007,
+              <https://www.rfc-editor.org/rfc/rfc4949>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+   [RFC8610]  Birkholz, H., Vigano, C., and C. Bormann, "Concise Data
+              Definition Language (CDDL): A Notational Convention to
+              Express Concise Binary Object Representation (CBOR) and
+              JSON Data Structures", RFC 8610, DOI 10.17487/RFC8610,
+              June 2019, <https://www.rfc-editor.org/rfc/rfc8610>.
+
+   [RFC9518]  Nottingham, M., "Centralization, Decentralization, and
+              Internet Standards", RFC 9518, DOI 10.17487/RFC9518,
+              December 2023, <https://www.rfc-editor.org/rfc/rfc9518>.
+
+9.2.  Informative References
+
+   [I-D.draft-petithuguenin-rfc-ontology]
+              Petit-Huguenin, M., "An Ontology for RFCs", Work in
+              Progress, Internet-Draft, draft-petithuguenin-rfc-
+              ontology-03, 25 July 2023,
+              <https://datatracker.ietf.org/doc/html/draft-
+              petithuguenin-rfc-ontology-03>.
+
+Acknowledgments
+
+   TODO acknowledge.
+
+Authors' Addresses
+
+   Orie Steele
+   Transmute
+   Email: orie@transmute.industries
+
+
+   Michael Prorock
+   mesur.io
+   Email: mprorock@mesur.io
+
+
+   Mahmoud Alkhraishi
+   mavennet
+   Email: mahmoud@mavennet.com
