@@ -62,26 +62,26 @@ such that they can be translated into digital credential profiles.
 
 # Introduction
 
-Verifier's have digital credential requirements that reduce their liability,
-improve their transaction throughput, comply with local, regional or international
+Verifiers have digital credential requirements that reduce their liability,
+improve their transaction throughput, comply with local, regional, or international
 laws, and support their environmental, social and governance objectives and values.
 
 Requirements are often expressed as "Policy Documents", and furnished to holders,
-in order to enable them to easily comply. For example, sometimes to receive a new
+to enable them to easily comply. For example, sometimes to receive a new
 credential, a holder may need to present one or more existing credentials, and
-different regional agencies might have unique requirements regarding the quality
+different regional agencies might have unique requirements regarding the quality,
 age, and issuing authority of these credentials.
 
 Not all the attributes of a credential may be necessary to disclose, and the details
 of the serialization are often less relevant to the verifier than
-the authenticity and integrity of the credential attributes attributes.
+the authenticity and integrity of the credential attributes.
 
-Verifier's need to update their policies as new credential formats become
+Verifiers need to update their policies as new credential formats become
 available, but still need to ensure that mandatory attributes are disclosed,
 even while changing the securing mechanisms and serialization details.
 
 Depending on how a verifier wrote their policy, the process of updating it
-in order to take advantage of new capabilities, safer cryptography,
+to take advantage of new capabilities, safer cryptography,
 smaller message sizes, or advances in data minimization, can be difficult.
 
 This document provides guidance to policy writers, enabling them to construct
@@ -98,9 +98,9 @@ Ontology:
 
 # Ontologies
 
-Verifier's can share their view of a subject area or domain by acknowledging or leveraging ontologies.
-Ontologies can be leveraged to model information requirements, with or without requiring the data'
-format to explicitly encode the ontology, or leverage the ontology directly in the construction of
+Verifiers can share their view of a subject area or domain by acknowledging or leveraging ontologies.
+Ontologies can be leveraged to model information requirements, with or without requiring the data
+format to explicitly encode the ontology or leverage the ontology directly in the construction of
 digital credentials.
 
 For example, the ontology defined in {{-RFC-ONT}} can be used to describe the information
@@ -114,17 +114,17 @@ and the ontologies that can express the concepts needed to understand the inform
 
 # Information vs Data
 
-Information is abstract, it can be expressed many ways,
-take for example the statement:
+Information is abstract, we can express the same information in many different ways, including in many different serializations.
+
+The following statement for example, expresses information:
 
 ~~~
-Alice believes Bob is 42 years old
+Alice believes Bob is 42 years old.
 ~~~
 
-This can be expressed in many different data structures,
-and the type of data structure can vary while preserving the information.
+That can also be expressed in different data structures, while preserving the information:
 
-In JSON we might write:
+in JSON:
 
 ~~~json
 {
@@ -140,12 +140,10 @@ In JSON we might write:
 }
 ~~~
 
-There are many different ways we can express the same information in a single serialization
-and many different serializations.
 
-Verifiers can write policies that mandate only one way to encode information in a serialization,
-and only allow one serialization, and this can reduce the cost to implement, and attack surface associated with
-support the digital credentials that are acceptable to a verifier.
+Verifiers can write policies that mandate a single method to encode information in a serialization
+and allow only one serialization. This can reduce both the cost to implement and the attack surface
+associated with the digital credentials that are acceptable to the verifier.
 
 However, if a new serialization is invented, that is simpler to support, and more directly aligns
 with the values of the verifier and their mission objectives, having such a policy could prevent the
@@ -159,15 +157,14 @@ and the acceptable serializations that can express this information required.
 # Schema vs Definition
 
 Once a verifier has documented their information requirements, and selected data formats
-capable of expressing the required information while satisfying their policies and values.
-
-The details of the acceptable data format SHOULD be considered.
+capable of expressing the required information while satisfying their policies and values,
+the details of the acceptable data format SHOULD be considered.
 
 There are a number of subtle details regarding octet encodings that can lead to security
 or performance issues in digital credential formats.
 
-The first is understanding the allowed data types for expressing information, for example
-integers, floating point numbers, strings and boolean values.
+For example, understanding the allowed data types for expressing information, be it an integer,
+a floating point number, a string, or a boolean value.
 
 Policy writers SHOULD describe the allowed data types for the expression of information,
 and SHOULD NOT support polymorphic types.
@@ -182,7 +179,7 @@ Although schema or data definition languages can help address some common securi
 such as validation as described in {{-SEC-GLOSS}}, there are still problematic
 expressions of information which should generally be avoided even when fully specifying data.
 
-Most commonly deeply nested data structures, or lists of deeply nested data strucutures containing lists.
+Most commonly deeply nested data structures, or lists of deeply nested data structures containing lists.
 
 Most digital credentials are about asserting attributes of a subject, in a way that is secured by the issuer,
 and provable by the holder.
@@ -207,13 +204,13 @@ As the issuer secures the data, the interpretation of the data is always in the 
 
 Policy writers SHOULD leverage tabular data structures (tables, csv) whenever possible.
 
-Policy writers SHOULD restrict the data that is expressed in digital credentials and how the data is expressed
+Policy writers SHOULD restrict what data is expressed in a digital credential and how the data is expressed
 not just the information that is required to be present.
 
-Policy writers SHOULD avoid making recomentations where the same information may be conveyed in many different,
+Policy writers SHOULD avoid making recommendations where the same information may be conveyed in many different,
 but equivalent data structures. When leveraging CBOR, {{-CDE}} SHOULD be used.
 
-Policy writers should avoid creating "frameworks" where interoperability is not immediatly available {{-RFC9518}}.
+Policy writers should avoid creating "frameworks" where interoperability is not immediately available {{-RFC9518}}.
 
 # Security Considerations
 
@@ -221,10 +218,13 @@ TODO Security
 
 ## Cryptographic Agility
 
+TODO Cryptographic Agility
+
 Registries /  Pick at least 2, use at least N bit security... avoid MUST support.... recommend AT LEAST support.
 
 ## Internationalized Names
 
+TODO Internationalized Names
 Strings / domain names... Unicode.
 
 ## Exploiting Data Validation
