@@ -204,6 +204,23 @@ As the issuer secures the data, the interpretation of the data is always in the 
 
 Policy writers SHOULD leverage tabular data structures (tables, csv) whenever possible.
 
+Policy writers SHOULD externalize definitions of data structures wherever possible, and use those
+external definitions to generate relevant sections of the policy document.
+
+Policy writers SHOULD ensure that output documents are computer readable, and that when tabular data is
+embedded in a policy document, that it is clearly separated from other sections of tabular data.
+
+Documents SHOULD be sectioned by logical concepts, and document sections dealing with the description of
+data structures SHOULD be clearly identifed and not mixed with other data structure descriptions without
+clear separation.
+
+Policy writers SHOULD clearly version policy documents, and SHOULD clearly identify the date
+of publication, start date of applicabiilty of the policy, and if known, the end date of
+applicability.
+
+Policy writers SHOULD clearly define the scope of the policy, and the audience to which the
+policy applies to. These scope and audience definitions SHOULD take place in their own sections.
+
 Policy writers SHOULD restrict what data is expressed in a digital credential and how the data is expressed
 not just the information that is required to be present.
 
