@@ -1,0 +1,139 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-12-24T00:02:27.544506+00:00",
+  "repo": "OR13/draft-steele-spice-profiles-bcp",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOK8DiCs5ilyBA",
+      "title": "minor language changes",
+      "url": "https://github.com/OR13/draft-steele-spice-profiles-bcp/pull/1",
+      "state": "MERGED",
+      "author": "mkhraisha",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Minor language changes",
+      "createdAt": "2023-12-21T16:53:57Z",
+      "updatedAt": "2023-12-21T16:54:42Z",
+      "baseRepository": "OR13/draft-steele-spice-profiles-bcp",
+      "baseRefName": "main",
+      "baseRefOid": "557713dff928d36aa233e7f3e37372d05f042c2f",
+      "headRepository": "OR13/draft-steele-spice-profiles-bcp",
+      "headRefName": "language_changes",
+      "headRefOid": "3b6f60d6677b705497c79dcaea9d0943e9c245da",
+      "closedAt": "2023-12-21T16:54:42Z",
+      "mergedAt": "2023-12-21T16:54:42Z",
+      "mergedBy": "OR13",
+      "mergeCommit": {
+        "oid": "845b3712e3d7a0f851ca6ef317877c9a8506e659"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOK8DiCs5q5EXs",
+          "commit": {
+            "abbreviatedOid": "3b6f60d"
+          },
+          "author": "OR13",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-12-21T16:54:38Z",
+          "updatedAt": "2023-12-21T16:54:38Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOK8DiCs5imsfr",
+      "title": "some additional proposed language around sectioning of docs and scope of docs",
+      "url": "https://github.com/OR13/draft-steele-spice-profiles-bcp/pull/2",
+      "state": "MERGED",
+      "author": "mprorock",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-12-21T20:42:56Z",
+      "updatedAt": "2023-12-22T21:17:39Z",
+      "baseRepository": "OR13/draft-steele-spice-profiles-bcp",
+      "baseRefName": "main",
+      "baseRefOid": "845b3712e3d7a0f851ca6ef317877c9a8506e659",
+      "headRepository": "OR13/draft-steele-spice-profiles-bcp",
+      "headRefName": "initial-sections-and-scope-language",
+      "headRefOid": "956727274d441e64b1bceba65651df4e14e34f8e",
+      "closedAt": "2023-12-22T21:17:39Z",
+      "mergedAt": "2023-12-22T21:17:39Z",
+      "mergedBy": "OR13",
+      "mergeCommit": {
+        "oid": "a608b88f009fdfc78b3da9defdbfdac312b3d0eb"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOK8DiCs5q6PjS",
+          "commit": {
+            "abbreviatedOid": "dcf5887"
+          },
+          "author": "OR13",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-12-21T20:46:16Z",
+          "updatedAt": "2023-12-21T20:46:16Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
+}
