@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-01-25T00:02:22.815492+00:00",
+  "timestamp": "2024-01-28T00:02:21.743555+00:00",
   "repo": "OR13/draft-steele-spice-profiles-bcp",
   "labels": [
     {
@@ -49,7 +49,32 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 3,
+      "id": "I_kwDOK8DiCs59Mwoz",
+      "title": "Align with other policy oriented drafts",
+      "url": "https://github.com/OR13/draft-steele-spice-profiles-bcp/issues/3",
+      "state": "OPEN",
+      "author": "OR13",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "- https://datatracker.ietf.org/doc/draft-hoffmann-gendispatch-policy-stakeholders/\r\n\r\n- https://datatracker.ietf.org/doc/draft-cooper-policy-interactions/",
+      "createdAt": "2024-01-25T14:17:39Z",
+      "updatedAt": "2024-01-26T16:44:41Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "body": "I've read the spice profiles bcp draft and skimmed the policy oriented drafts and it is not clear to me what sorts of alignment are desired. \r\nI'm happy to attempt a PR that addresses this issue, but I'm not sure what you're looking for. Can you give me a few examples?",
+          "createdAt": "2024-01-26T16:44:39Z",
+          "updatedAt": "2024-01-26T16:44:39Z"
+        }
+      ]
+    }
+  ],
   "pulls": [
     {
       "number": 1,
