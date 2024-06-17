@@ -87,7 +87,9 @@ smaller message sizes, or advances in data minimization, can be difficult.
 This document provides guidance to policy writers, enabling them to construct
 policies that can be translated into human and machine verifiable profiles,
 enabling digital credential formats to evolve with the speed and precision
-at which policies can be written.
+at which policies can be written. It strives to concretely provide a means for
+"improving ways of working between policy experts and technical experts"
+[Policy experts are IETF stakeholders](https://datatracker.ietf.org/doc/html/draft-hoffmann-gendispatch-policy-stakeholders-03)
 
 # Terminology
 
@@ -255,6 +257,13 @@ This document has no IANA actions.
 
 
 --- back
+
+# Informative References
+[I_D.draft-hoffmann-gendispatch-policy-stakeholders]
+    "Policy experts are IETF stakeholders", Work in Progress, Internet-Draft,
+    draft-hoffmann-gendispatch-policy-stakeholders-03, 10 January 2024,
+    <https://datatracker.ietf.org/doc/html/draft-hoffmann-gendispatch-policy-stakeholders-03>
+
 
 # Acknowledgments
 {:numbered="false"}
