@@ -14,26 +14,26 @@ that enable a holder to prove they have attributes that are acceptable to a veri
        This document provides guidance to verifiers enabling them to describe their requirements
 such that they can be translated into digital credential profiles. 
     " name="description">
-<meta content="xml2rfc 3.19.0" name="generator">
+<meta content="xml2rfc 3.21.0" name="generator">
 <meta content="digitial credentials" name="keyword">
 <meta content="data model profiles" name="keyword">
 <meta content="policy guidance" name="keyword">
 <meta content="draft-steele-spice-profiles-bcp-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.19.0
-    Python 3.11.6
+  xml2rfc 3.21.0
+    Python 3.12.3
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
     intervaltree 3.1.0
-    Jinja2 3.1.2
-    lxml 4.9.3
-    platformdirs 4.1.0
+    Jinja2 3.1.4
+    lxml 4.9.4
+    platformdirs 4.2.2
     pycountry 22.3.5
     PyYAML 6.0.1
     requests 2.31.0
-    setuptools 68.2.2
+    setuptools 69.5.1
     six 1.16.0
-    wcwidth 0.2.12
+    wcwidth 0.2.13
 -->
 <link href="draft-steele-spice-profiles-bcp.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1032,11 +1032,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">DCP-BCP</td>
-<td class="right">December 2023</td>
+<td class="right">June 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Steele, et al.</td>
-<td class="center">Expires 24 June 2024</td>
+<td class="center">Expires 19 December 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1049,12 +1049,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-steele-spice-profiles-bcp-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-12-22" class="published">22 December 2023</time>
+<time datetime="2024-06-17" class="published">17 June 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-06-24">24 June 2024</time></dd>
+<dd class="expires"><time datetime="2024-12-19">19 December 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1115,7 +1115,7 @@ such that they can be translated into digital credential profiles.<a href="#sect
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 24 June 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 19 December 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1124,7 +1124,7 @@ such that they can be translated into digital credential profiles.<a href="#sect
 <a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
         </h2>
 <p id="section-boilerplate.2-1">
-            Copyright (c) 2023 IETF Trust and the persons identified as the
+            Copyright (c) 2024 IETF Trust and the persons identified as the
             document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.2-2">
             This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1191,10 +1191,13 @@ such that they can be translated into digital credential profiles.<a href="#sect
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
-            <p id="section-toc.1-1.10.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+            <p id="section-toc.1-1.10.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-informative-references-2" class="internal xref">Informative References</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
-            <p id="section-toc.1-1.11.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
+            <p id="section-toc.1-1.11.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12">
+            <p id="section-toc.1-1.12.1"><a href="#appendix-C" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1225,7 +1228,9 @@ smaller message sizes, or advances in data minimization, can be difficult.<a hre
 <p id="section-1-6">This document provides guidance to policy writers, enabling them to construct
 policies that can be translated into human and machine verifiable profiles,
 enabling digital credential formats to evolve with the speed and precision
-at which policies can be written.<a href="#section-1-6" class="pilcrow">¶</a></p>
+at which policies can be written. It strives to concretely provide a means for
+"improving ways of working between policy experts and technical experts"
+<a href="https://datatracker.ietf.org/doc/html/draft-hoffmann-gendispatch-policy-stakeholders-03">Policy experts are IETF stakeholders</a><a href="#section-1-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="terminology">
@@ -1430,7 +1435,7 @@ Strings / domain names... Unicode.<a href="#section-7.2-1" class="pilcrow">¶</a
 <dl class="references">
 <dt id="I-D.draft-ietf-cbor-cde">[I-D.draft-ietf-cbor-cde]</dt>
         <dd>
-<span class="refAuthor">Bormann, C.</span>, <span class="refTitle">"CBOR Common Deterministic Encoding (CDE)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-cbor-cde-00</span>, <time datetime="2023-11-27" class="refDate">27 November 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-cbor-cde-00">https://datatracker.ietf.org/doc/html/draft-ietf-cbor-cde-00</a>&gt;</span>. </dd>
+<span class="refAuthor">Bormann, C.</span>, <span class="refTitle">"CBOR Common Deterministic Encoding (CDE)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-cbor-cde-02</span>, <time datetime="2024-03-03" class="refDate">3 March 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-cbor-cde-02">https://datatracker.ietf.org/doc/html/draft-ietf-cbor-cde-02</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2119">[RFC2119]</dt>
         <dd>
@@ -1463,22 +1468,33 @@ Strings / domain names... Unicode.<a href="#section-7.2-1" class="pilcrow">¶</a
 <dl class="references">
 <dt id="I-D.draft-petithuguenin-rfc-ontology">[I-D.draft-petithuguenin-rfc-ontology]</dt>
       <dd>
-<span class="refAuthor">Petit-Huguenin, M.</span>, <span class="refTitle">"An Ontology for RFCs"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-petithuguenin-rfc-ontology-03</span>, <time datetime="2023-07-25" class="refDate">25 July 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-petithuguenin-rfc-ontology-03">https://datatracker.ietf.org/doc/html/draft-petithuguenin-rfc-ontology-03</a>&gt;</span>. </dd>
+<span class="refAuthor">Petit-Huguenin, M.</span>, <span class="refTitle">"An Ontology for RFCs"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-petithuguenin-rfc-ontology-04</span>, <time datetime="2024-01-20" class="refDate">20 January 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-petithuguenin-rfc-ontology-04">https://datatracker.ietf.org/doc/html/draft-petithuguenin-rfc-ontology-04</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
 </div>
 </section>
-<div id="acknowledgments">
+<div id="informative-references">
 <section id="appendix-A">
+      <h2 id="name-informative-references-2">
+<a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-informative-references-2" class="section-name selfRef">Informative References</a>
+      </h2>
+<p id="appendix-A-1">[I_D.draft-hoffmann-gendispatch-policy-stakeholders]
+    "Policy experts are IETF stakeholders", Work in Progress, Internet-Draft,
+    draft-hoffmann-gendispatch-policy-stakeholders-03, 10 January 2024,
+    <a href="https://datatracker.ietf.org/doc/html/draft-hoffmann-gendispatch-policy-stakeholders-03">https://datatracker.ietf.org/doc/html/draft-hoffmann-gendispatch-policy-stakeholders-03</a><a href="#appendix-A-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="acknowledgments">
+<section id="appendix-B">
       <h2 id="name-acknowledgments">
 <a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
       </h2>
-<p id="appendix-A-1">TODO acknowledge.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<p id="appendix-B-1">TODO acknowledge.<a href="#appendix-B-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
-<section id="appendix-B">
+<section id="appendix-C">
       <h2 id="name-authors-addresses">
 <a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>

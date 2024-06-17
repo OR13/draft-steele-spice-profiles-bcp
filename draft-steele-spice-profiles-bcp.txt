@@ -5,10 +5,10 @@
 Secure Patterns for Internet CrEdentials                       O. Steele
 Internet-Draft                                                 Transmute
 Intended status: Informational                                M. Prorock
-Expires: 24 June 2024                                           mesur.io
+Expires: 19 December 2024                                       mesur.io
                                                            M. Alkhraishi
                                                                 mavennet
-                                                        22 December 2023
+                                                            17 June 2024
 
 
            Digital Credential Profiles Best Current Practices
@@ -58,11 +58,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 June 2024.
+   This Internet-Draft will expire on 19 December 2024.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -90,6 +90,7 @@ Table of Contents
    9.  References
      9.1.  Normative References
      9.2.  Informative References
+   Appendix A.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -125,7 +126,11 @@ Table of Contents
    This document provides guidance to policy writers, enabling them to
    construct policies that can be translated into human and machine
    verifiable profiles, enabling digital credential formats to evolve
-   with the speed and precision at which policies can be written.
+   with the speed and precision at which policies can be written.  It
+   strives to concretely provide a means for "improving ways of working
+   between policy experts and technical experts" Policy experts are IETF
+   stakeholders (https://datatracker.ietf.org/doc/html/draft-hoffmann-
+   gendispatch-policy-stakeholders-03)
 
 2.  Terminology
 
@@ -326,9 +331,9 @@ Table of Contents
 
    [I-D.draft-ietf-cbor-cde]
               Bormann, C., "CBOR Common Deterministic Encoding (CDE)",
-              Work in Progress, Internet-Draft, draft-ietf-cbor-cde-00,
-              27 November 2023, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-cbor-cde-00>.
+              Work in Progress, Internet-Draft, draft-ietf-cbor-cde-02,
+              3 March 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-cbor-cde-02>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -358,9 +363,18 @@ Table of Contents
    [I-D.draft-petithuguenin-rfc-ontology]
               Petit-Huguenin, M., "An Ontology for RFCs", Work in
               Progress, Internet-Draft, draft-petithuguenin-rfc-
-              ontology-03, 25 July 2023,
+              ontology-04, 20 January 2024,
               <https://datatracker.ietf.org/doc/html/draft-
-              petithuguenin-rfc-ontology-03>.
+              petithuguenin-rfc-ontology-04>.
+
+Appendix A.  Informative References
+
+   [I_D.draft-hoffmann-gendispatch-policy-stakeholders] "Policy experts
+   are IETF stakeholders", Work in Progress, Internet-Draft, draft-
+   hoffmann-gendispatch-policy-stakeholders-03, 10 January 2024,
+   https://datatracker.ietf.org/doc/html/draft-hoffmann-gendispatch-
+   policy-stakeholders-03 (https://datatracker.ietf.org/doc/html/draft-
+   hoffmann-gendispatch-policy-stakeholders-03)
 
 Acknowledgments
 
