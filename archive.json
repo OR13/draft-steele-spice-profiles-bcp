@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-06-16T00:02:14.173136+00:00",
+  "timestamp": "2024-06-18T00:02:15.863314+00:00",
   "repo": "OR13/draft-steele-spice-profiles-bcp",
   "labels": [
     {
@@ -67,7 +67,7 @@
       "comments": [
         {
           "author": "brentzundel",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "I've read the spice profiles bcp draft and skimmed the policy oriented drafts and it is not clear to me what sorts of alignment are desired. \r\nI'm happy to attempt a PR that addresses this issue, but I'm not sure what you're looking for. Can you give me a few examples?",
           "createdAt": "2024-01-26T16:44:39Z",
           "updatedAt": "2024-01-26T16:44:39Z"
@@ -165,26 +165,42 @@
       "id": "PR_kwDOK8DiCs5lm_MJ",
       "title": "add quote from policy doc",
       "url": "https://github.com/OR13/draft-steele-spice-profiles-bcp/pull/4",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "brentzundel",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This PR fixes Issue #3 by adding a quote from one of the listed documents in a relevant place.\r\n\r\nIn a large part the listed documents were more orthogonal than directly relevant to this BCP. \r\n\r\n\"Policy experts are IETF stakeholders\" is primarily about utilizing policy experts in the standards development process, while this bcp aims to create a bridge whereby certain policy experts can more easily utilize particular standards. The bcp is certainly well-harmonized with the spirit of the Stakeholders draft and so I think the quote and link are appropriate, but I don't think we should go further than that.\r\n\r\n\"IETF Policy Interactions\" is a list of interactions between IETF efforts and policy efforts, again primarily as they relate to standards development. I do not think there is much of a link from the Interactions doc to this bcp, but in time it may make sense for the interactions doc to be updated with reference to this bcp.\r\n\r\nI am also almost completely guessing about the format for adding an informative link, so adjustments to what I've added would be much appreciated.",
       "createdAt": "2024-01-31T19:27:41Z",
-      "updatedAt": "2024-01-31T19:27:41Z",
+      "updatedAt": "2024-06-17T14:59:27Z",
       "baseRepository": "OR13/draft-steele-spice-profiles-bcp",
       "baseRefName": "main",
       "baseRefOid": "a608b88f009fdfc78b3da9defdbfdac312b3d0eb",
       "headRepository": "brentzundel/draft-steele-spice-profiles-bcp",
       "headRefName": "main",
       "headRefOid": "5840e2cf64d9d3560a737fa8d8fc30f6936e255a",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-06-17T14:59:27Z",
+      "mergedAt": "2024-06-17T14:59:27Z",
+      "mergedBy": "mprorock",
+      "mergeCommit": {
+        "oid": "22d22a35dc04be17cc7822bfd6e0262a2dad5381"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOK8DiCs5-jLTV",
+          "commit": {
+            "abbreviatedOid": "5840e2c"
+          },
+          "author": "mprorock",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-06-17T14:59:20Z",
+          "updatedAt": "2024-06-17T14:59:20Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
