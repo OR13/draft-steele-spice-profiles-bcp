@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-21T00:02:28.844745+00:00",
+  "timestamp": "2024-07-23T00:02:12.951931+00:00",
   "repo": "OR13/draft-steele-spice-profiles-bcp",
   "labels": [
     {
@@ -73,6 +73,22 @@
           "updatedAt": "2024-01-26T16:44:39Z"
         }
       ]
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOK8DiCs6QczLd",
+      "title": "Text Clarity and Citations",
+      "url": "https://github.com/OR13/draft-steele-spice-profiles-bcp/issues/5",
+      "state": "OPEN",
+      "author": "mkhraisha",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "General Question:\r\n\r\nDo we want to include rationale behind the statements or should it just be general guidance? \r\nFor example:\r\n \r\n> Strings and arbitrary length data structures SHOULD be avoided,\r\n>    whenever possible.\r\n\r\nmakes sense, but doesn't cite to anything or explain why its should be avoided just that it should be.\r\n\r\nSimilarly we do not have any statements explaining why they should not support polymorphic types.\r\n\r\n>    Policy writers SHOULD describe the allowed data types for the\r\n   expression of information, and SHOULD NOT support polymorphic types.\r\n   \r\n\r\nOn another note for clarity we should add a secondary example to the JSON example in section 4:\r\n \r\n> That can also be expressed in different data structures, while\r\n>    preserving the information:\r\n\r\n   \r\n in section 6:\r\n \r\n\r\n> Although schema or data definition languages can help address some\r\n>    common security issues such as validation as described in [RFC4949],\r\n>    there are still problematic expressions of information which should\r\n>    generally be avoided even when fully specifying data.\r\n\r\nI'm not sure if i'm misreading it but I can't find the validation issue described in [RFC4949](https://datatracker.ietf.org/doc/html/rfc4949) \r\n\r\n",
+      "createdAt": "2024-07-22T18:12:09Z",
+      "updatedAt": "2024-07-22T18:12:09Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
