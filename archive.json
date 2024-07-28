@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-25T00:02:27.970875+00:00",
+  "timestamp": "2024-07-28T00:02:38.910352+00:00",
   "repo": "OR13/draft-steele-spice-profiles-bcp",
   "labels": [
     {
@@ -62,7 +62,7 @@
       "labels": [],
       "body": "- https://datatracker.ietf.org/doc/draft-hoffmann-gendispatch-policy-stakeholders/\r\n\r\n- https://datatracker.ietf.org/doc/draft-cooper-policy-interactions/",
       "createdAt": "2024-01-25T14:17:39Z",
-      "updatedAt": "2024-01-26T16:44:41Z",
+      "updatedAt": "2024-07-27T16:21:57Z",
       "closedAt": null,
       "comments": [
         {
@@ -71,6 +71,20 @@
           "body": "I've read the spice profiles bcp draft and skimmed the policy oriented drafts and it is not clear to me what sorts of alignment are desired. \r\nI'm happy to attempt a PR that addresses this issue, but I'm not sure what you're looking for. Can you give me a few examples?",
           "createdAt": "2024-01-26T16:44:39Z",
           "updatedAt": "2024-01-26T16:44:39Z"
+        },
+        {
+          "author": "aj-stein-nist",
+          "authorAssociation": "NONE",
+          "body": "More interestingly, neither of the cited documents meaningfully define what policy is and what it is not (since we as human beings love this term), especially how it compares and contrasts to standards, regulations, and law. I am not sure of a good normative definition, does that matter?\r\n\r\nTo wit, many people in municipal and federal government have built info and data model solutions around law, is that different from policy? Is the bridge between engineers and standards/law/regulation makers different from policy makers? Are they the same and it still matters in a way. I am not sure the above I-Ds and this document clarify what, why, and how that matters (to me, who has dabbled in this space).\r\n\r\nhttps://github.com/DCCouncil/dc-law-xml-codified\r\n\r\nhttps://blogs.loc.gov/law/2013/11/the-united-states-code-online-downloadable-xml-files-and-more/",
+          "createdAt": "2024-07-26T01:10:57Z",
+          "updatedAt": "2024-07-26T01:10:57Z"
+        },
+        {
+          "author": "OR13",
+          "authorAssociation": "OWNER",
+          "body": "When I created this issue, my plan was to add some sections for folks who are approaching this document from a particular policy angle and provide citations for them to find supporting material.\n\nAs the AI control work picks up, I'm hopeful we will be able to add citations for that as well.",
+          "createdAt": "2024-07-27T16:21:56Z",
+          "updatedAt": "2024-07-27T16:21:56Z"
         }
       ]
     },
@@ -87,6 +101,78 @@
       "body": "General Question:\r\n\r\nDo we want to include rationale behind the statements or should it just be general guidance? \r\nFor example:\r\n \r\n> Strings and arbitrary length data structures SHOULD be avoided,\r\n>    whenever possible.\r\n\r\nmakes sense, but doesn't cite to anything or explain why its should be avoided just that it should be.\r\n\r\nSimilarly we do not have any statements explaining why they should not support polymorphic types.\r\n\r\n>    Policy writers SHOULD describe the allowed data types for the\r\n   expression of information, and SHOULD NOT support polymorphic types.\r\n   \r\n\r\nOn another note for clarity we should add a secondary example to the JSON example in section 4:\r\n \r\n> That can also be expressed in different data structures, while\r\n>    preserving the information:\r\n\r\n   \r\n in section 6:\r\n \r\n\r\n> Although schema or data definition languages can help address some\r\n>    common security issues such as validation as described in [RFC4949],\r\n>    there are still problematic expressions of information which should\r\n>    generally be avoided even when fully specifying data.\r\n\r\nI'm not sure if i'm misreading it but I can't find the validation issue described in [RFC4949](https://datatracker.ietf.org/doc/html/rfc4949) \r\n\r\n",
       "createdAt": "2024-07-22T18:12:09Z",
       "updatedAt": "2024-07-22T18:12:09Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOK8DiCs6Q6VDA",
+      "title": "Use RFC3444 for information model and data model framing?",
+      "url": "https://github.com/OR13/draft-steele-spice-profiles-bcp/issues/6",
+      "state": "OPEN",
+      "author": "aj-stein-nist",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "[RFC3444](https://datatracker.ietf.org/doc/html/rfc3444) seems highly applicable. I can open PRs, if such contribution is welcome from authors or other onlookers.",
+      "createdAt": "2024-07-26T00:58:34Z",
+      "updatedAt": "2024-07-26T15:53:20Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "david-waltermire",
+          "authorAssociation": "NONE",
+          "body": "RFC3444 has been a really useful tool in discussing the difference between information and data models.",
+          "createdAt": "2024-07-26T15:53:19Z",
+          "updatedAt": "2024-07-26T15:53:19Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOK8DiCs6Q6Vvu",
+      "title": "How should policy makers handle homogenous data sequences?",
+      "url": "https://github.com/OR13/draft-steele-spice-profiles-bcp/issues/7",
+      "state": "OPEN",
+      "author": "aj-stein-nist",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-07-26T01:02:09Z",
+      "updatedAt": "2024-07-26T01:02:09Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOK8DiCs6Q6VyR",
+      "title": "How should policy makers handle heterogenous data sequences?",
+      "url": "https://github.com/OR13/draft-steele-spice-profiles-bcp/issues/8",
+      "state": "OPEN",
+      "author": "aj-stein-nist",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-07-26T01:02:22Z",
+      "updatedAt": "2024-07-26T01:02:22Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOK8DiCs6Q6WXj",
+      "title": "How should policy makers handle minimally required data, or any required fields at all?",
+      "url": "https://github.com/OR13/draft-steele-spice-profiles-bcp/issues/9",
+      "state": "OPEN",
+      "author": "aj-stein-nist",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "A public community forum had pan excellent discussion around an article](https://news.ycombinator.com/item?id=41043568) \"types as interfaces.\" Commentary indicated why Protobuf and Capnproto maintainers and software makers had to strongly discourage `required` field usage and it is because how people do not understand strictly enforced schemas and how composite data structures work. For policy makers how they convey required should be handled very carefully and communicated to protocol and data model developers with extreme care. I do not see much of this in the current draft.",
+      "createdAt": "2024-07-26T01:05:32Z",
+      "updatedAt": "2024-07-26T01:05:32Z",
       "closedAt": null,
       "comments": []
     }
